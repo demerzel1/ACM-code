@@ -1,0 +1,35 @@
+Edit-Preferences
+Interface:
+	Monospace 12
+	Monospace 10
+	Monospace 10
+Editor:
+	Features:
+		Line Wrapping
+		"Smart" Home Key
+		Code Folding
+		Use indicators
+	Indentation
+		Match braces
+	Completions
+		completions 1、3、4、5
+		1，10，30，10
+		全勾
+Keybindings:
+	Format:
+		Comment Lines				Alt+/
+		Uncomment Lines				Shift+Alt+/
+	Build:
+		Compile:					F8
+		Build:						F9
+	View:
+		Toggle Messages Window		F2
+		Toggle Sidebar				F3
+	Focus:
+		Switch to Search Bar		F4
+		Switch to Scribble			[空]
+		Switch to VTE				[空]
+Build
+	Compile(F8)	g++ -Wall -g -O2 -std=gnu++14 -o "%e" "%f"
+	Build&Run(F9)	g++ -Wall -g -O2 -std=gnu++14 -o "%e" "%f" && 
+	gnome-terminal --working-directory="%d" -e "bash -c \"time ./"%e"; read \" "

@@ -1,0 +1,25 @@
+#include<iostream>
+#include<map>
+#include<cstdio>
+using namespace std;
+int main()
+{
+    map<int,int> p;
+    int n,m,q;
+    while(~scanf("%d%d",&n,&m)){
+        p.clear();
+        scanf("%d",&q);
+        int x,y;
+        for(int i=0;i<q;i++){
+            scanf("%d%d",&x,&y);
+            if(p[x*m+y]!=1){
+                cout<<"YES"<<endl;
+                p[x*m+y]=1;
+            }
+            else
+                cout<<"NO"<<endl;
+        }
+    }
+    return 0;
+}
+
